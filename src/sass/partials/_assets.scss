@@ -22,7 +22,7 @@
     font-size: 15px;
     font-weight: 700;
     line-height: 1.5;
-    width: 160px;
+    max-width: 160px;
     margin-left: 5px;
   }
 }
@@ -40,8 +40,6 @@
     display: flex;
     justify-content: space-between;
 
-    &__item {
-    }
     &__img {
       width: 80px;
     }
@@ -49,7 +47,34 @@
       margin-left: 8px;
       max-width: 140px;
       &:last-child {
-        width: 102px;
+        max-width: 102px;
+      }
+    }
+  }
+}
+
+@include desktop {
+  .values {
+    padding: 0 25px 100px 25px;
+    display: flex;
+    justify-content: center;
+    &__container {
+      max-width: 1400px;
+    }
+  }
+
+  .assets {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    &__img {
+      width: 100px;
+    }
+    &__description {
+      margin-left: 4px;
+      font-size: 20px;
+      &:last-child {
+        max-width: 220px;
       }
     }
   }

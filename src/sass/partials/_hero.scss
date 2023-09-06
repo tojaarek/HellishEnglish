@@ -91,7 +91,7 @@
 
 @include desktop {
   .hero {
-    padding: 80px 25px 170px 25px;
+    padding: 80px 25px 100px 25px;
     display: flex;
     justify-content: center;
     &__container {
@@ -109,21 +109,7 @@
     &__description {
       margin-bottom: 40px;
       font-size: 20px;
-      font-style: normal;
-      line-height: 1.6;
       letter-spacing: 1.6px;
-    }
-    &__button {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 264px;
-      height: 52px;
-      text-transform: uppercase;
-      border: none;
-      background-color: $accentColor;
-      color: $pureWhite;
-      cursor: pointer;
     }
   }
 }

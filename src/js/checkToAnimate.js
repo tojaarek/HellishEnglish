@@ -11,8 +11,5 @@ function checkAndAnimate() {
     }
   });
 }
-
-if (window.innerWidth <= 450) {
-  checkAndAnimate();
-  window.addEventListener('scroll', checkAndAnimate);
-}
+checkAndAnimate();
+window.addEventListener('scroll', checkAndAnimate);
