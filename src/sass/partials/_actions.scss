@@ -31,6 +31,7 @@
     }
     &:is(:focus, :hover) {
       box-shadow: 0px 15px 33px rgba(0, 0, 0, 0.344);
+      cursor: pointer;
     }
   }
   &__img {
@@ -68,6 +69,7 @@
     }
     &__headline {
       font-size: 26px;
+      margin-bottom: 50px;
     }
   }
 
@@ -85,6 +87,41 @@
     }
     &__headline {
       width: 200px;
+    }
+  }
+}
+
+@include desktop {
+  .know-how {
+    padding: 60px 25px 50px 25px;
+    display: flex;
+    justify-content: center;
+    &__container {
+      max-width: 1400px;
+    }
+    &__headline {
+      font-size: 46px;
+    }
+  }
+
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 30px;
+    &__item {
+      width: 425px;
+      height: 396px;
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+    &__headline {
+      width: 300px;
+      font-size: 20px;
+    }
+    &__description {
+      font-size: 16px;
     }
   }
 }

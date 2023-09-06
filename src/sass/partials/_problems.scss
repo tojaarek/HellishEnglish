@@ -56,7 +56,10 @@
       width: 450px;
     }
     &__wrapper {
-      padding: 30px 100px 30px 100px;
+      margin: 0 60px;
+      padding: 20px 20px 20px 20px;
+      display: flex;
+      justify-content: center;
     }
     &__list {
       display: flex;
@@ -66,6 +69,42 @@
     }
     &__item {
       max-width: 200px;
+    }
+  }
+}
+
+@include desktop {
+  .problems {
+    padding: 60px 25px 60px 25px;
+    display: flex;
+    justify-content: center;
+    &__container {
+      max-width: 1400px;
+    }
+    &__headline {
+      width: 880px;
+      font-size: 46px;
+      letter-spacing: 1.38px;
+    }
+    &__wrapper {
+      padding: 40px 60px 40px 60px;
+    }
+    &__item {
+      width: 100%;
+      &--number {
+        font-size: 20px;
+        margin-bottom: 5px;
+      }
+      &--text {
+        font-size: 20px;
+      }
+    }
+    &__list {
+      justify-content: space-between;
+      column-gap: 0;
+    }
+    &__item {
+      max-width: 300px;
     }
   }
 }
