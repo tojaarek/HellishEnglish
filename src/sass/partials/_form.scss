@@ -1,0 +1,185 @@
+.consultation {
+  padding: 50px 20px 50px 20px;
+  background-color: $accentTextColorDark;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.5) 50%, rgba(47, 48, 58, 0.5) 50%),
+    url(../images/form-background-mobile.png);
+
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    & {
+      background-image: url(../images/form-background-mobile@2x.png);
+    }
+  }
+  @media (min-device-pixel-ratio: 3), (min-resolution: 268dpi), (min-resolution: 3dppx) {
+    & {
+      background-image: url(../images/form-background-mobile@3x.png);
+    }
+  }
+  &__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__headline {
+    color: $pureWhite;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.11;
+    letter-spacing: 0.42px;
+    margin-bottom: 35px;
+    max-width: 350px;
+    &--colored {
+      color: $accentColor;
+      font-weight: 700;
+    }
+  }
+}
+
+.form {
+  width: 100%;
+  &__group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  &__headline {
+    text-align: center;
+    color: $pureWhite;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.96px;
+    margin-bottom: 35px;
+    max-width: 290px;
+    &--colored {
+      color: $accentColor;
+      font-weight: 500;
+    }
+  }
+  &__list {
+    width: 100%;
+  }
+  &__item {
+    position: relative;
+    margin-bottom: 25px;
+    &--checkbox {
+      padding-left: 25px;
+      font-size: 14px;
+      color: $pureWhite;
+    }
+  }
+  &__label {
+    font-size: 14px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 18px 20px;
+    display: flex;
+    flex-direction: column;
+    pointer-events: none;
+    transition: 0.5s;
+    color: $pureWhite;
+  }
+  &__input {
+    color: $pureWhite;
+    font-size: 14px;
+    width: 100%;
+    height: 52px;
+    border-radius: 0;
+    padding: 10px 20px 10px 20px;
+    background: none;
+    outline: none;
+    border: 1px solid $pureWhite;
+    transition: 200ms cubic-bezier(0.17, 0.67, 0.83, 0.67);
+    transition-property: border;
+    &:is(:hover, :focus) {
+      border: 1px solid $accentColor;
+    }
+  }
+  &__checkbox {
+    appearance: none;
+    &:checked + .form__agreement {
+      &::before {
+        background-color: $accentColor;
+        background-image: url(../images/checkbox.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+  }
+  &__agreement {
+    &::before {
+      display: block;
+      position: absolute;
+      cursor: pointer;
+      left: 0;
+      top: 0;
+      content: '';
+      width: 15px;
+      height: 15px;
+      border: 1.8px solid $pureWhite;
+    }
+  }
+  &__link {
+    color: $accentColor;
+    text-decoration: underline;
+  }
+}
+
+.form .form__item .form__input:valid ~ label {
+  top: -8px;
+  left: 20px;
+  color: $accentTextColorDark;
+  font-size: 12px;
+  background-color: $pureWhite;
+  padding: 3px 4px;
+}
+
+.form .form__item .form__input:focus ~ label {
+  top: -8px;
+  left: 20px;
+  color: $pureWhite;
+  font-size: 12px;
+  background-color: $accentColor;
+  padding: 3px 4px;
+}
+
+@include tablet {
+  .consultation {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(47, 48, 58, 0.5) 50%,
+        rgba(47, 48, 58, 0.5) 50%
+      ),
+      url(../images/form-background-tablet.png);
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      & {
+        background-image: url(../images/form-background-tablet@2x.png);
+      }
+    }
+    @media (min-device-pixel-ratio: 3), (min-resolution: 268dpi), (min-resolution: 3dppx) {
+      & {
+        background-image: url(../images/form-background-tablet@3x.png);
+      }
+      &__headline {
+        font-size: 26px;
+        max-width: 500px;
+      }
+    }
+
+    .form {
+      width: 400px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      &__headline {
+        max-width: 400px;
+      }
+    }
+  }
+}

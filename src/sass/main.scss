@@ -1,7 +1,16 @@
-/*
- * Główny plik dla stylów.
- * Wszystkie partials podłączamy tutaj.
- */
-
-// Style dla pliku z przykładem HTML fragmentu
-@import './example';
+@import './utils/_mixin.scss';
+@import './utils/_variables.scss';
+@import './utils/_global.scss';
+@import './partials/_header.scss';
+@import './partials/_hero.scss';
+@import './partials/_assets.scss';
+@import './partials/_problems.scss';
+@import './partials/_actions.scss';
+@import './partials/_program.scss';
+@import './partials/_whyus.scss';
+@import './partials/_teacher.scss';
+@import './partials/_guarantee.scss';
+@import './partials/_feedback.scss';
+@import './partials/_form.scss';
+@import './partials/_footer.scss';
+@import './partials/_mobile-menu.scss';

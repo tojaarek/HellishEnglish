@@ -1,0 +1,81 @@
+.header {
+  padding: 20px 20px;
+  width: 100%;
+  position: fixed;
+  top: -2px;
+  z-index: 998;
+  background-color: $pureWhite;
+  &__container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__button {
+    display: none;
+  }
+  &__menu {
+    height: 38px;
+    width: 38px;
+    fill: black;
+    &--hidden {
+      display: none;
+    }
+  }
+}
+
+.logo {
+  width: 115px;
+  height: 41.89px;
+}
+
+.navigation {
+  display: none;
+}
+
+@include tablet {
+  .header {
+    padding: 25px 25px;
+    top: -3px;
+    &__container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    &__button {
+      display: none;
+    }
+    &__menu {
+      display: none;
+    }
+  }
+  .navigation {
+    display: flex;
+    &__item {
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+    }
+    &__link {
+      color: $accentTextColorLight;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      transition: 200ms cubic-bezier(0.17, 0.67, 0.83, 0.67);
+      transition-property: color;
+      &:is(:focus, :hover) {
+        color: $accentColor;
+      }
+    }
+  }
+}
+
+@include tablet {
+  .header {
+    display: flex;
+    justify-content: center;
+    &__container {
+      max-width: 1400px;
+    }
+  }
+}

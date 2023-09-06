@@ -1,0 +1,35 @@
+<section id="form" class="consultation">
+    <div class="consultation__container">
+        <h2 class="consultation__headline">
+            Registration for a <span class="consultation__headline--colored">free</span> phone <span
+                class="consultation__headline--colored">consultation</span>
+            on the nuances of English UPE
+        </h2>
+        <form class="form" name="callRequestForm" autocomplete="on">
+            <div class="form__group" role="group" aria-labelledby="service-head">
+                <h3 class="form__headline">Leave a request for participation in a <span
+                        class="form__headline--colored">free lesson</span>. <br />
+                    A consultant will contact you and answer your questions</h3>
+                <ul class="form__list">
+                    <li class="form__item">
+                        <input class="form__input" type="text" name="callRequestName" required="" id="formName">
+                        <label class="form__label">Name *</label>
+                    </li>
+                    <li class="form__item">
+                        <input class="form__input" type="tel" required="" id="formNumber" name="callRequestNumber">
+                        <label class="form__label" for="formNumber">Number *</label>
+                    </li>
+                    <li class="form__item form__item--checkbox">
+                        <input class="form__checkbox" id="formTerms" type="checkbox" name="serviceOrderTerms"
+                            value="terms-yes" required />
+                        <label class="form__agreement" for="formTerms">
+                            I accept the
+                            <a href="#" class="form__link">Privacy Policy</a> *
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <button class="hero__button" type="submit">I want a free lesson</button>
+        </form>
+    </div>
+</section>

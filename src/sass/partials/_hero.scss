@@ -1,0 +1,129 @@
+.hero {
+  padding: 110px 20px 110px 20px;
+  background-image: url(/src/images/Vector\ 1.svg);
+  background-repeat: no-repeat;
+  background-size: 120%;
+  background-position-x: -40px;
+  background-position-y: 410px;
+
+  &__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  &__headline {
+    font-size: 20px;
+    line-height: 1.3;
+    font-weight: 800;
+    letter-spacing: 1.5;
+    margin-bottom: 60px;
+  }
+  &__description {
+    font-size: 15px;
+    line-height: 1.57;
+    color: $accentTextColorLight;
+    margin-bottom: 40px;
+    &--black {
+      font-weight: 700;
+      color: $mainTextColor;
+      display: block;
+    }
+    &--orange {
+      font-weight: 700;
+      color: $accentColor;
+      display: inline-block;
+    }
+  }
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 52px;
+    text-transform: uppercase;
+    border: none;
+    background-color: $accentColor;
+    color: $pureWhite;
+    cursor: pointer;
+    transition: 200ms cubic-bezier(0.17, 0.67, 0.83, 0.67);
+    transition-property: transform;
+    &:is(:focus, :hover) {
+      transform: scale(1.03);
+    }
+  }
+  &__wrapper {
+    margin-top: 40px;
+    text-align: center;
+  }
+}
+
+@include tablet {
+  .hero {
+    background-image: none;
+    &__container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    &__headline {
+      font-size: 26px;
+      line-height: 1.6;
+      letter-spacing: 1.3;
+      margin-bottom: 40px;
+    }
+    &__description {
+      margin-bottom: 30px;
+    }
+    &__button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 264px;
+      height: 52px;
+      text-transform: uppercase;
+      border: none;
+      background-color: $accentColor;
+      color: $pureWhite;
+      cursor: pointer;
+    }
+  }
+}
+
+@include desktop {
+  .hero {
+    padding: 80px 25px 170px 25px;
+    display: flex;
+    justify-content: center;
+    &__container {
+      max-width: 1400px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    &__headline {
+      font-size: 58px;
+      line-height: 1.3;
+      letter-spacing: 1.74px;
+      margin-bottom: 40px;
+    }
+    &__description {
+      margin-bottom: 40px;
+      font-size: 20px;
+      font-style: normal;
+      line-height: 1.6;
+      letter-spacing: 1.6px;
+    }
+    &__button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 264px;
+      height: 52px;
+      text-transform: uppercase;
+      border: none;
+      background-color: $accentColor;
+      color: $pureWhite;
+      cursor: pointer;
+    }
+  }
+}

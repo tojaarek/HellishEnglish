@@ -1,0 +1,55 @@
+.guarantee {
+  padding: 50px 0 20px 0;
+  &__headline {
+    text-align: center;
+    color: $mainTextColor;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 1.3;
+    letter-spacing: 0.03em;
+    margin-bottom: 30px;
+  }
+}
+
+.promises {
+  padding: 30px 20px 30px 55px;
+  background-color: $boxBackground;
+  &__item {
+    color: $accentTextColorDark;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.66;
+    position: relative;
+    &--orange {
+      color: $accentColor;
+      font-weight: 600;
+    }
+    &:not(:last-child) {
+      margin-bottom: 25px;
+      &::after {
+        content: '';
+        height: 80%;
+        border-left: 2px dotted $accentTextColorLight;
+        position: absolute;
+        top: 29px;
+        left: -24px;
+      }
+    }
+    &::before {
+      content: url(../images/flame.svg);
+      position: absolute;
+      top: 0;
+      left: -30px;
+      z-index: 2;
+    }
+  }
+}
+
+@include tablet {
+  .guarantee {
+    padding: 50px 25px 0 25px;
+  }
+  .promises {
+    padding: 30px 90px 30px 90px;
+  }
+}

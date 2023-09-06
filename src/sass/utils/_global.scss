@@ -1,0 +1,27 @@
+* {
+  font-family: 'Montserrat';
+  font-weight: 500;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 100%;
+  max-width: 320px;
+}
+
+@include tablet {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@include desktop {
+  .container {
+    max-width: 1200px;
+  }
+}

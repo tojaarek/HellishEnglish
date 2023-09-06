@@ -1,0 +1,139 @@
+.program {
+  background-color: $mainTextColor;
+  padding: 60px 20px 20px 20px;
+  &__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__headline {
+    color: $pureWhite;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 1.3;
+    letter-spacing: 0.03em;
+  }
+  &__photo {
+    display: none;
+  }
+}
+
+.plan {
+  margin-top: 43px;
+  padding-left: 50px;
+  color: $pureWhite;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  &::before {
+    content: '';
+    width: 3px;
+    height: 91%;
+    background-color: $accentTextColorLight;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+  }
+  &__headline {
+    color: $pureWhite;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 2;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 7px;
+    &::before {
+      content: '';
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: $accentColor;
+      position: absolute;
+      left: -45.82px;
+      top: 7px;
+    }
+  }
+  &__subheadline {
+    color: $accentColor;
+    padding-left: 20px;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.64;
+    letter-spacing: 0.96px;
+    position: relative;
+    &--padding {
+      padding-bottom: 18px;
+    }
+    &::before {
+      content: '';
+      width: 12px;
+      height: 2px;
+      background-color: $accentColor;
+      position: absolute;
+      left: 0;
+      top: 9.5px;
+    }
+  }
+  &__topic {
+    color: $accentTextColorLight;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.64;
+    letter-spacing: 0.96px;
+    opacity: 0.6;
+  }
+  &__wrapper {
+    padding: 10px 0;
+  }
+}
+
+@include tablet {
+  .program {
+    padding: 50px 25px 20px 25px;
+    &__container {
+      max-width: 830px;
+      display: block;
+      position: relative;
+    }
+    &__headline {
+      font-size: 26px;
+      margin-bottom: 60px;
+    }
+    &__photo {
+      display: block;
+      position: absolute;
+      bottom: -100px;
+      right: -25px;
+    }
+  }
+
+  .plan {
+    &::before {
+      height: 85%;
+    }
+    &__item {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 7px;
+    }
+    &__tablet-wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__subheadline {
+      margin-bottom: 10px;
+    }
+    &__wrapper {
+      width: 200px;
+      &--space {
+        margin-right: 60px;
+      }
+      &--last {
+        width: 115px;
+      }
+    }
+  }
+}
