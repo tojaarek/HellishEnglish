@@ -1,0 +1,2 @@
+function checkAndAnimate(){const n=document.querySelectorAll(".assets__description");window.innerWidth<576&&n.forEach((n=>{n.getBoundingClientRect().top<=800&&n.classList.add("animate__bounceInRight")}))}function onPageLoad(){if(window.innerWidth>=576){document.querySelectorAll(".assets__description").forEach((n=>{n.classList.add("animate__bounceInRight")}))}}window.innerWidth<576&&window.addEventListener("scroll",checkAndAnimate),document.addEventListener("DOMContentLoaded",onPageLoad);
+//# sourceMappingURL=index.7f731653.js.map
