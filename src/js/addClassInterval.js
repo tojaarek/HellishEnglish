@@ -9,4 +9,4 @@ function addClassInterval(className, duration) {
 
 setInterval(() => {
   addClassInterval('animate__heartBeat', 1000);
-}, 4000);
+}, 2000);

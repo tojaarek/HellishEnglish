@@ -69,3 +69,17 @@
     }
   }
 }
+
+@include desktop {
+  .contact {
+    &__link {
+      font-size: 18px;
+    }
+  }
+
+  .copyrights {
+    &__container {
+      font-size: 14px;
+    }
+  }
+}

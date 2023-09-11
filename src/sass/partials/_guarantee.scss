@@ -53,3 +53,24 @@
     padding: 30px 90px 30px 90px;
   }
 }
+
+@include desktop {
+  .guarantee {
+    padding: 50px 25px 100px 25px;
+    display: flex;
+    justify-content: center;
+    &__headline {
+      font-size: 46px;
+      margin-bottom: 50px;
+    }
+  }
+  .promises {
+    padding: 30px 90px 30px 90px;
+    &__item {
+      font-size: 20px;
+      &::before {
+        top: 1px;
+      }
+    }
+  }
+}

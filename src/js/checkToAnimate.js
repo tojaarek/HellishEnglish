@@ -1,15 +1,31 @@
 function checkAndAnimate() {
   const assets = document.querySelectorAll('.assets__description');
 
-  assets.forEach(element => {
-    const elementRect = element.getBoundingClientRect();
-    const elementTop = elementRect.top;
-    const triggerHeight = 800;
+  if (window.innerWidth < 576) {
+    assets.forEach(element => {
+      const elementRect = element.getBoundingClientRect();
+      const elementTop = elementRect.top;
+      const triggerHeight = 800;
 
-    if (elementTop <= triggerHeight) {
-      element.classList.add('animate__bounceInRight');
-    }
-  });
+      if (elementTop <= triggerHeight) {
+        element.classList.add('animate__bounceInRight');
+      }
+    });
+  }
 }
-checkAndAnimate();
-window.addEventListener('scroll', checkAndAnimate);
+
+function onPageLoad() {
+  if (window.innerWidth >= 576) {
+    const assets = document.querySelectorAll('.assets__description');
+
+    assets.forEach(element => {
+      element.classList.add('animate__bounceInRight');
+    });
+  }
+}
+
+if (window.innerWidth < 576) {
+  window.addEventListener('scroll', checkAndAnimate);
+}
+
+document.addEventListener('DOMContentLoaded', onPageLoad);

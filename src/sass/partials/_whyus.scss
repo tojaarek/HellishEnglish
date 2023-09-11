@@ -70,3 +70,41 @@
     }
   }
 }
+
+@include desktop {
+  .why-us {
+    padding: 120px 25px 100px 25px;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 50%, rgba(17, 21, 24, 1) 10%);
+    &__container {
+      max-width: 1400px;
+    }
+    &__headline {
+      display: none;
+    }
+    &__wrapper {
+      max-width: 1300px;
+      padding: 40px 60px 40px 60px;
+      position: relative;
+      z-index: 2;
+    }
+    &__item {
+      width: 100%;
+      &--number {
+        font-size: 20px;
+        margin-bottom: 5px;
+      }
+      &--text {
+        font-size: 20px;
+      }
+    }
+    &__list {
+      justify-content: space-between;
+      column-gap: 0;
+    }
+    &__item {
+      max-width: 300px;
+    }
+  }
+}
