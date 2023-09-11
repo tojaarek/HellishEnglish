@@ -9,6 +9,5 @@ icon.addEventListener('click', function () {
   icon1.classList.toggle('a');
   icon2.classList.toggle('c');
   icon3.classList.toggle('b');
-  nav.classList.toggle('show');
   blue.classList.toggle('slide');
 });
